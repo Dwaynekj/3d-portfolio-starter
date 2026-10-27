@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+*.pyc
+.venv/
+venv/
+my_scan_*.ply
