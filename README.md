@@ -16,6 +16,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 | 6 | Run the same code, unchanged, on a real room scan | Prints `PASS` within 5 cm of the true pose |
 | 7 | `make_gaussian_seed()`: the first step of a Gaussian splat | Prints the seed's shape and scale range |
 | 8–9 | (optional) Your own phone scan, then ship it | Your own repo and resume bullet |
+| HW | `sample_points_on_mesh()`: turn a real phone scan of Elmo into a point cloud | Prints `PASS` when points cover the surface evenly |
 
 ## Get started
 
@@ -45,6 +46,8 @@ data/
   room_fragment_B_downsampled.ply    real RGB-D room scan, fragment B (Part 6)
   room_A_to_B.npy                    true 4x4 alignment of the two room fragments (Part 6 grader)
 ```
+
+The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) isn't in the repo. The homework cell downloads it from the [`data-v1` release](https://github.com/Dwaynekj/3d-portfolio-starter/releases/tag/data-v1).
 
 ## Data credits
 
