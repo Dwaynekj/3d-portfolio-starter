@@ -47,7 +47,7 @@ data/
   room_A_to_B.npy                    true 4x4 alignment of the two room fragments (Part 6 grader)
 ```
 
-The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) isn't in the repo. The homework cell downloads it from the [`data-v1` release](https://github.com/Dwaynekj/3d-portfolio-starter/releases/tag/data-v1).
+The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) isn't in the repo. The homework cell downloads it from the [`data-elmo-v1` release](https://github.com/Dwaynekj/3d-portfolio-starter/releases/tag/data-elmo-v1).
 
 ## Data credits
 
