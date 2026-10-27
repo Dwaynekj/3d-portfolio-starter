@@ -1,6 +1,9 @@
 # PointFusion3D: 3D Portfolio Starter
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student.ipynb)
+| Notebook | What's in it | Open |
+|---|---|---|
+| **Day 2** | Setup, Parts 1–3 and the Elmo homework. Use this one for Session 2. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_2.ipynb) |
+| **Full** | All four sessions: Parts 1–9 plus the homework. Use this from Session 3 on. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
 
 Build a 3D point-cloud registration pipeline from scratch: take two messy, partial 3D scans of the same object and fuse them into one aligned model. This is the starter notebook for **Reboot × Spatial AI Foundations**, a four-session hands-on intro to 3D computer vision.
 
@@ -20,7 +23,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 
 ## Get started
 
-**In Colab (recommended):** click the **Open in Colab** badge above, then **File → Save a copy in Drive** so your work is saved. Run the Setup cell first. It installs Open3D and downloads the data from this repo, which takes about a minute.
+**In Colab (recommended):** click the **Open in Colab** badge for the notebook you need, then **File → Save a copy in Drive** so your work is saved. Run the Setup cell first. It installs Open3D and downloads the data from this repo, which takes about a minute. No GPU needed: Colab's default CPU runtime runs everything.
 
 **On your own machine:**
 
@@ -28,7 +31,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 git clone https://github.com/Dwaynekj/3d-portfolio-starter.git
 cd 3d-portfolio-starter
 pip install -r requirements.txt
-jupyter notebook PointFusion3D_student.ipynb
+jupyter notebook PointFusion3D_student_Day_2.ipynb   # or PointFusion3D_student_FULL.ipynb
 ```
 
 Run the cells top to bottom. Cells with `# TODO` are yours to complete. Everything else is given so you can focus on the algorithms.
@@ -36,7 +39,9 @@ Run the cells top to bottom. Cells with `# TODO` are yours to complete. Everythi
 ## What's in the repo
 
 ```
-PointFusion3D_student.ipynb   the notebook you work in
+PointFusion3D_student_Day_2.ipynb   Session 2 only: Parts 1-3 and the homework
+PointFusion3D_student_FULL.ipynb    all four sessions: Parts 1-9 and the homework
+assets/stanford_bunny_mesh_vs_points.png   the bunny as a mesh vs. as a point cloud (Part 1)
 requirements.txt              Python packages for running locally
 data/
   scanA_bunny_partial1.ply           Scan A: partial scan of the Stanford Bunny
@@ -51,7 +56,7 @@ The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) i
 
 ## Data credits
 
-- **Stanford Bunny:** [Stanford 3D Scanning Repository](https://graphics.stanford.edu/data/3Dscanrep/), Stanford University Computer Graphics Laboratory. Sampled down and split into two partial views for this notebook.
+- **Stanford Bunny:** [Stanford 3D Scanning Repository](https://graphics.stanford.edu/data/3Dscanrep/), Stanford University Computer Graphics Laboratory. Sampled down and split into two partial views for this notebook. The mesh picture in Part 1 uses the full-resolution model as distributed with Open3D (`BunnyMesh`).
 - **Room fragments:** from the Redwood indoor RGB-D dataset (Choi, Zhou and Koltun), as distributed with [Open3D](https://www.open3d.org/)'s `DemoICPPointClouds`, downsampled to 5 cm. The reference alignment was computed with Open3D's point-to-plane ICP.
 
 ## Keep going
