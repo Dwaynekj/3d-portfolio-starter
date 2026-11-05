@@ -3,7 +3,8 @@
 | Notebook | What's in it | Open |
 |---|---|---|
 | **Day 2** | Setup, Parts 1–3 and the Elmo homework. Use this one for Session 2. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_2.ipynb) |
-| **Full** | All four sessions: Parts 1–9 plus the homework. Use this from Session 3 on. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
+| **Day 3** | Day 2 recap (given), then Parts 4–7: the ICP loop, grading, a real room scan, and a Gaussian splat seed. Use this one for Session 3. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_3.ipynb) |
+| **Full** | All four sessions: Parts 1–9 plus the homework. Use this for Session 4, or to work ahead. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
 
 Build a 3D point-cloud registration pipeline from scratch: take two messy, partial 3D scans of the same object and fuse them into one aligned model. This is the starter notebook for **Reboot × Spatial AI Foundations**, a four-session hands-on intro to 3D computer vision.
 
@@ -31,7 +32,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 git clone https://github.com/Dwaynekj/3d-portfolio-starter.git
 cd 3d-portfolio-starter
 pip install -r requirements.txt
-jupyter notebook PointFusion3D_student_Day_2.ipynb   # or PointFusion3D_student_FULL.ipynb
+jupyter notebook PointFusion3D_student_Day_3.ipynb   # or Day_2 / FULL
 ```
 
 Run the cells top to bottom. Cells with `# TODO` are yours to complete. Everything else is given so you can focus on the algorithms.
@@ -40,6 +41,7 @@ Run the cells top to bottom. Cells with `# TODO` are yours to complete. Everythi
 
 ```
 PointFusion3D_student_Day_2.ipynb   Session 2 only: Parts 1-3 and the homework
+PointFusion3D_student_Day_3.ipynb   Session 3 only: Day 2 recap, then Parts 4-7
 PointFusion3D_student_FULL.ipynb    all four sessions: Parts 1-9 and the homework
 assets/stanford_bunny_mesh_vs_points.png   the bunny as a mesh vs. as a point cloud (Part 1)
 requirements.txt              Python packages for running locally
