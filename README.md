@@ -3,8 +3,8 @@
 | Notebook | What's in it | Open |
 |---|---|---|
 | **Day 2** | Setup, Parts 1–3 and the Elmo homework. Use this one for Session 2. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_2.ipynb) |
-| **Day 3** | Day 2 recap (given), then Parts 4–7: the ICP loop, grading, a real room scan, and a Gaussian splat seed. Use this one for Session 3. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_3.ipynb) |
-| **Full** | All four sessions: Parts 1–9 plus the homework. Use this for Session 4, or to work ahead. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
+| **Day 3** | Day 2 recap (given), then Parts 4–7: the ICP loop, grading, a noisy room scan, and a Gaussian splat seed. Use this one for Session 3. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_3.ipynb) |
+| **Full** | All of it: Parts 1–9 plus the homework, including the optional extras (Part 8: run it on your own scan; Part 9: package it). Use it to work ahead. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
 
 Build a 3D point-cloud registration pipeline from scratch: take two messy, partial 3D scans of the same object and fuse them into one aligned model. This is the starter notebook for **Reboot × Spatial AI Foundations**, a four-session hands-on intro to 3D computer vision.
 
@@ -17,7 +17,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 | 3 | `find_correspondences()`: nearest-neighbor search | Toy test prints `PASS` |
 | 4 | `icp()`: the Iterative Closest Point loop | Scan B snaps onto Scan A |
 | 5 | (given) Ground-truth grader | Prints `PASS` within 5° and 2 cm |
-| 6 | Run the same code, unchanged, on a real room scan | Prints `PASS` within 5 cm of the true pose |
+| 6 | Run the same code, unchanged, on noisy scans of a room | Prints `PASS` within 5 cm of the true pose |
 | 7 | `make_gaussian_seed()`: the first step of a Gaussian splat | Prints the seed's shape and scale range |
 | 8–9 | (optional) Your own phone scan, then ship it | Your own repo and resume bullet |
 | HW | `sample_points_on_mesh()`: turn a real phone scan of Elmo into a point cloud | Prints `PASS` when points cover the surface evenly |
@@ -49,9 +49,7 @@ data/
   scanA_bunny_partial1.ply           Scan A: partial scan of the Stanford Bunny
   scanB_bunny_partial2_raw.ply       Scan B: second view, rotated, noisy, with outliers
   bunny_known_R.npy, bunny_known_t.npy   the true rotation and translation (Part 5 grader)
-  room_fragment_A_downsampled.ply    real RGB-D room scan, fragment A (Part 6)
-  room_fragment_B_downsampled.ply    real RGB-D room scan, fragment B (Part 6)
-  room_A_to_B.npy                    true 4x4 alignment of the two room fragments (Part 6 grader)
+  room_A_to_B.npy                    true 4x4 alignment of the two room scans (Part 6 grader)
 ```
 
 The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) isn't in the repo. The homework cell downloads it from the [`data-elmo-v1` release](https://github.com/Dwaynekj/3d-portfolio-starter/releases/tag/data-elmo-v1).
@@ -59,7 +57,7 @@ The Elmo phone scan for the homework (an 11 MB textured mesh from KIRI Engine) i
 ## Data credits
 
 - **Stanford Bunny:** [Stanford 3D Scanning Repository](https://graphics.stanford.edu/data/3Dscanrep/), Stanford University Computer Graphics Laboratory. Sampled down and split into two partial views for this notebook. The mesh picture in Part 1 uses the full-resolution model as distributed with Open3D (`BunnyMesh`).
-- **Room fragments:** from the Redwood indoor RGB-D dataset (Choi, Zhou and Koltun), as distributed with [Open3D](https://www.open3d.org/)'s `DemoICPPointClouds`, downsampled to 5 cm. The reference alignment was computed with Open3D's point-to-plane ICP.
+- **Room scans (Part 6):** the first two clouds of [Open3D](https://www.open3d.org/)'s `DemoICPPointClouds` sample data, the same pair the [LearnOpenCV ICP tutorial](https://learnopencv.com/iterative-closest-point-icp-explained/) uses. Part 6 downloads them with `o3d.data` and downsamples them to 5 cm. The reference alignment was computed with Open3D's point-to-plane ICP.
 
 ## Keep going
 
