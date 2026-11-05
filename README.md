@@ -3,7 +3,7 @@
 | Notebook | What's in it | Open |
 |---|---|---|
 | **Day 2** | Setup, Parts 1–3 and the Elmo homework. Use this one for Session 2. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_2.ipynb) |
-| **Day 3** | Day 2 recap (given), then Parts 4–7: the ICP loop, grading, a noisy room scan, and a Gaussian splat seed. Use this one for Session 3. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_3.ipynb) |
+| **Day 3** | Day 2 recap (given), then Parts 4–6: the ICP loop, grading, and noisy room scans. Use this one for Session 3. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_Day_3.ipynb) |
 | **Full** | All of it: Parts 1–9 plus the homework, including the optional extras (Part 8: run it on your own scan; Part 9: package it). Use it to work ahead. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dwaynekj/3d-portfolio-starter/blob/main/PointFusion3D_student_FULL.ipynb) |
 
 Build a 3D point-cloud registration pipeline from scratch: take two messy, partial 3D scans of the same object and fuse them into one aligned model. This is the starter notebook for **Reboot × Spatial AI Foundations**, a four-session hands-on intro to 3D computer vision.
@@ -18,7 +18,7 @@ You fill in the core algorithms yourself, and the notebook checks your work as y
 | 4 | `icp()`: the Iterative Closest Point loop | Scan B snaps onto Scan A |
 | 5 | (given) Ground-truth grader | Prints `PASS` within 5° and 2 cm |
 | 6 | Run the same code, unchanged, on noisy scans of a room | Prints `PASS` within 5 cm of the true pose |
-| 7 | `make_gaussian_seed()`: the first step of a Gaussian splat | Prints the seed's shape and scale range |
+| 7 | `make_gaussian_seed()`: the first step of a Gaussian splat (Session 4, full notebook) | Prints the seed's shape and scale range |
 | 8–9 | (optional) Your own phone scan, then ship it | Your own repo and resume bullet |
 | HW | `sample_points_on_mesh()`: turn a real phone scan of Elmo into a point cloud | Prints `PASS` when points cover the surface evenly |
 
